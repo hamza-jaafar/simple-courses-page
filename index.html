@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: "Tajawal", sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      .header {
+        width: 100%;
+        height: 350px;
+        /* background-color: aqua; */
+        overflow: hidden;
+        position: relative;
+        border-bottom: 10px solid #4f99ce;
+      }
+      #header-img {
+        width: 100%;
+        position: relative;
+        bottom: 100;
+      }
+      #cover {
+        background-color: #000000;
+        width: 100%;
+        height: 350px;
+        position: absolute;
+        bottom: 0;
+        opacity: 0.7;
+      }
+      .menu-header {
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        direction: rtl;
+      }
+      #menu {
+        margin-right: 10px;
+        margin-top: 20px;
+      }
+      #menu > .btn {
+        color: aliceblue;
+        text-decoration: none;
+        margin-right: 30px;
+        padding: 5px;
+        border-radius: 10px;
+        transition: background 0.4s;
+      }
+      #menu > .btn:hover {
+        background-color: rgba(255, 255, 255, 0.411);
+      }
+      .active {
+        background-color: #4f99ce;
+      }
+      #main-content {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -270px;
+      }
+      #img-frame {
+        height: 150px;
+        width: 150px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #4f99ce;
+        border-radius: 50%;
+        margin: 0 auto;
+        box-shadow: 0px 9px 8px #c7c7c7;
+        transition: 0.4s;
+      }
+      #img-frame > img {
+        height: 100%;
+      }
+      #center-content {
+        text-align: center;
+        color: white;
+        font-size: 29px;
+      }
+      #img-frame:hover {
+        box-shadow: 0px 9px 8px #959595;
+        padding: 15px;
+      }
+      .main-body {
+        position: relative;
+        top: -200px;
+      }
+      .main-body > .main-header > h1 {
+        font-weight: 400;
+      }
+      .main-body > .main-header {
+        text-align: center;
+        font-size: 18px;
+        color: #6b6b6b;
+      }
+      .features,
+      .courses {
+        direction: rtl;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      .feature,
+      .course {
+        margin: 0px 50px;
+        background-color: rgb(199, 199, 199);
+        text-align: center;
+        color: #4f99ce;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .courses-section {
+        margin-top: 150px;
+        background-color: rgb(235, 235, 235);
+        padding: 20px 0px;
+        direction: rtl;
+      }
+      .course > img {
+        height: 100px;
+        border-radius: 10px;
+      }
+      .course {
+        background: transparent;
+        display: flex;
+        border: 1px solid #585858;
+        margin: 0px 30px;
+        width: 30%;
+        font-size: 13;
+        box-shadow: 0px 2px 8px #eee7e7;
+      }
+      .course h2 {
+        margin-right: 12px;
+        color: #817d7d;
+      }
+      .course button {
+        background-color: #4f99ce;
+        border: none;
+        color: white;
+        height: 30px;
+        width: 90px;
+        font-family: "Tajawal", sans-serif;
+        box-shadow: 0px 2px 8px rgb(143, 143, 143);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .course button:hover {
+        background-color: #1b5279;
+      }
+      .courses-section > h1 {
+        margin-right: 30px;
+        font-size: 40px;
+        font-weight: 500;
+      }
+      .footer {
+        background-color: #1b5279;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+      .footer h5 {
+        font-weight: 400;
+      }
+      /* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+      /* Tablets */
+      @media (max-width: 1024px) {
+        #main-content {
+          top: -230px;
+        }
+
+        .feature {
+          margin: 0 20px;
+        }
+
+        .course {
+          width: 45%;
+          margin: 15px;
+        }
+
+        .courses {
+          flex-wrap: wrap;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .header {
+          height: 260px;
+        }
+
+        #cover {
+          height: 260px;
+        }
+
+        #main-content {
+          top: -200px;
+        }
+
+        #center-content {
+          font-size: 22px;
+        }
+
+        #img-frame {
+          width: 120px;
+          height: 120px;
+        }
+
+        .menu-header {
+          height: auto;
+        }
+
+        #menu {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-top: 10px;
+        }
+
+        #menu > .btn {
+          margin: 5px 10px;
+          font-size: 14px;
+        }
+
+        .features {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .feature {
+          margin: 15px 0;
+          width: 80%;
+        }
+
+        .courses {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .course {
+          width: 90%;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .course img {
+          margin-bottom: 10px;
+        }
+
+        .course h2 {
+          margin-right: 0;
+        }
+
+        .courses-section > h1 {
+          font-size: 28px;
+          text-align: center;
+          margin-right: 0;
+        }
+      }
+
+      /* Small Mobile */
+      @media (max-width: 480px) {
+        #center-content h1 {
+          font-size: 22px;
+        }
+
+        .main-body {
+          top: -160px;
+        }
+
+        .footer {
+          height: auto;
+          padding: 15px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-header">
+      <div class="header">
+        <img id="header-img" src="programming.png" alt="image" />
+        <div id="cover"></div>
+        <div class="menu-header">
+          <div id="menu">
+            <a href="#" class="btn active">الرئيسية</a>
+            <a href="#" class="btn">دورات</a>
+            <a href="#" class="btn">مقالات</a>
+            <a href="#" class="btn">ملخصات</a>
+            <a href="#" class="btn">مصادر</a>
+            <a href="#" class="btn">إتصل بنا</a>
+          </div>
+        </div>
+      </div>
+      <div id="main-content">
+        <div id="center-content">
+          <h1>تعلم معنا</h1>
+          <div id="img-frame">
+            <img src="logo.png" alt="logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="main-header">
+        <h1>تعلم البرمجة معنا بكل سهولة</h1>
+      </div>
+      <div class="features">
+        <div class="feature"><h1>دورات تطبيقية</h1></div>
+        <div class="feature"><h1>تعلم سهل</h1></div>
+        <div class="feature"><h1>مشاريع حقيقية</h1></div>
+      </div>
+      <div class="courses-section">
+        <h1>دورات تطوير المواقع</h1>
+        <div class="courses">
+          <div class="course">
+            <img src="react.png" alt="react png" />
+            <div>
+              <h2>دورة تعلم رياكت</h2>
+              <button>شاهد الدورة</button>
+            </div>
+          </div>
+          <div class="course">
+            <img src="laravel.png" alt="react png" />
+            <div>
+              <h2>دورة تعلم لارافيل</h2>
+              <button>شاهد الدورة</button>
+            </div>
+          </div>
+          <div class="course">
+            <img src="html.png" alt="react png" />
+            <div>
+              <h2>دورة HTML&CSS</h2>
+              <button>شاهد الدورة</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <h5 class="">© 2026. All rights reserved.</h5>
+    </div>
+  </body>
+</html>
