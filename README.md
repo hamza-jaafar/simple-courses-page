@@ -7,7 +7,7 @@ A clean and simple **Arabic programming landing page**, built using **HTML & CSS
 ## ✨ Features
 
 - 📱 **Fully Responsive Design**
-  - Works smoothly on mobile, tablet, and desktop
+- Works smoothly on mobile, tablet, and desktop
 - 🎨 Clean & modern UI
 - 🌍 RTL (Right-To-Left) support for Arabic content
 - 🧩 Flexbox-based layout
