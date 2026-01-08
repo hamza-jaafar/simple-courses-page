@@ -41,7 +41,7 @@ Responsive styles were added **without modifying the original HTML structure**, 
 
 🔗 **Demo Link:**  
 
-
+https://simple-courses-page.netlify.app/
 
 ---
 
