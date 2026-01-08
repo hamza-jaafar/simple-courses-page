@@ -1,4 +1,4 @@
-# 🌐 Learn Programming Website (Responsive)
+# 🌐 Learn Programming Website only HTML & CSS (Responsive)
 
 A clean and simple **Arabic programming landing page**, built using **HTML & CSS only**, with a fully responsive layout for all screen sizes.
 
